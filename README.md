@@ -1,0 +1,196 @@
+Here is a comprehensive, production-ready `README.md` for your **Marketing Intelligence Dashboard** repository. It incorporates your project overview, interactive features, directory layout, technical architecture, and asset screenshot previews.
+
+---
+
+```markdown
+# 📊 Marketing Intelligence Dashboard
+
+An executive-level, interactive Business Intelligence (BI) dashboard built with **Streamlit**, **Pandas**, and **Plotly Express**. This application connects paid digital ad performance across **Facebook**, **Google**, and **TikTok** with core e-commerce financials (**Revenue**, **Gross Profit**, **COGS**, **CAC**, and **AOV**) to provide real-time visibility into marketing efficiency and business ROI.
+
+---
+
+## 📸 Dashboard Preview
+
+### 📊 Tab 1: Executive Overview
+![Executive Overview](assets/overview.png)
+![Overview Metrics](assets/overview_2.png)
+![Overview Trends](assets/overvie_3.png)
+
+---
+
+### 🎯 Tab 2: Channel Performance Deep Dive
+![Channel Performance](assets/Tab_2.png)
+![Channel Trends](assets/Tab_2.1.png)
+![Channel Metrics](assets/Tab_2.3.png)
+
+---
+
+### 🔍 Tab 3: Campaign & Tactic Deep Dive
+![Campaign Deep Dive](assets/Tab3.png)
+![Tactic Analysis](assets/Tab3.1.png)
+![Scatter Analysis](assets/Tab3.3.png)
+
+---
+
+### 📈 Tab 4: Business Impact & Financials
+![Business Impact](assets/Tab4.png)
+![Customer Acquisition](assets/Tab4.1.png)
+![Revenue Breakdown](assets/Tab4.2.png)
+
+---
+
+### 🎛️ Sidebar Filter Panel
+![Filter Panel](assets/Filter_panel.png)
+
+---
+
+## ✨ Key Features & Navigation
+
+The dashboard is structured into four functional tabs designed for e-commerce operators, performance marketers, and executive decision-makers:
+
+### 1. 💡 Tab 1: Overview
+* **Executive Insights Cards:** Dynamic summary blocks highlighting current ROAS, marketing revenue attribution, and budget reallocation opportunities based on active filter selections.
+* **Top KPI Metric Cards:** High-level summary cards displaying Total Spend, Attributed Revenue, Overall ROAS, Business Revenue, Gross Profit, Impressions, Clicks, New Customers, CAC, and Gross Profit Margin.
+* **ROAS Trend Chart:** Interactive time-series line chart tracking blended return on ad spend movements over time.
+* **Ads Dynamics by Channel:** Multi-metric bar chart with interactive selectors (Spend, Revenue, Clicks, Impressions) stacked by platform.
+* **Spend vs. Attributed Revenue:** Spline line chart evaluating daily ad expenditure against direct sales returns.
+
+### 2. 🎯 Tab 2: Channel Performance
+* **ROAS by Marketing Channel:** Comparative bar chart evaluating channel efficiency across Facebook, Google, and TikTok.
+* **Spend Share Distribution:** Donut chart showing budget allocation per ad channel.
+* **Granular Channel ROAS Trends:** Multi-line time series chart tracking daily platform performance fluctuations.
+* **Detailed Channel Table:** Formatted matrix detailing Spend, Revenue, ROAS, CTR, CPC, CPM, Impressions, and Clicks per platform.
+
+### 3. 🔍 Tab 3: Campaign & Tactic Deep Dive
+* **ROAS by Tactic:** Grouped bar chart comparing marketing tactics (`ASC`, `Prospecting`, `Non-Branded Search`, `Display`, `Retargeting`, `Spark Ads`).
+* **Campaign Bubble Chart:** Scatter plot mapping `Total Spend` (X-axis) vs. `ROAS` (Y-axis), where bubble size represents `Attributed Revenue`.
+* **Granular Campaign Table:** Performance matrix tracking 30 campaigns across target states (`CA`, `NY`).
+
+### 4. 📈 Tab 4: Business Impact
+* **Revenue & Profit Trends:** Line chart comparing store revenue against gross profit over time.
+* **Customer Acquisition Trends:** Visualizes new customer acquisition volume alongside Customer Acquisition Cost (`CAC`) trends.
+* **Attributed vs. Non-Attributed Revenue:** Stacked area chart comparing direct marketing sales against organic/direct store revenue.
+* **Daily Financial Log:** Complete tabular breakdown of store operations (`Orders`, `COGS`, `Gross Profit Margin`, `AOV`, `% Attributed Revenue`).
+
+---
+
+## 🎛️ Dynamic Sidebar Filters
+
+* **Time Horizon:** Switch between `Daily` (Last 7 Days), `Weekly` (Last 30 Days), `Monthly` (Last 6 Months), or set a `Custom Date Range`.
+* **Marketing Channel(s):** Filter across Facebook, Google, and TikTok using scrollable select-all checkboxes.
+* **Tactic(s):** Dynamically filtered list based on the active channels selected.
+* **State(s):** Geographic region filtering (`CA`, `NY`).
+
+---
+
+## 🗄️ Repository & Directory Structure
+
+```text
+ecommerce-marketing-dashboard/
+│
+├── app.py                             # Main Streamlit dashboard application code
+├── ecommerce_daily_kpis.csv           # Executive-level daily store totals (120 rows)
+├── ecommerce_granular_data.csv        # Low-level campaign dataset (3,600 rows)
+├── combined_marketing_business.csv    # Channel-level daily summary table (360 rows)
+│
+├── assets/                            # Dashboard screenshot images for README
+│   ├── overview.png
+│   ├── overview_2.png
+│   ├── overvie_3.png
+│   ├── Tab_2.png
+│   ├── Tab_2.1.png
+│   ├── Tab_2.3.png
+│   ├── Tab3.png
+│   ├── Tab3.1.png
+│   ├── Tab3.3.png
+│   ├── Tab4.png
+│   ├── Tab4.1.png
+│   ├── Tab4.2.png
+│   └── Filter_panel.png
+│
+├── .streamlit/
+│   └── config.toml                    # Streamlit theme configuration
+│
+├── requirements.txt                   # Project dependencies
+└── README.md                          # Project documentation
+
+```
+
+---
+
+## 🛠️ Tech Stack
+
+* **Framework:** [Streamlit](https://streamlit.io/)
+* **Data Processing:** [Pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/)
+* **Visualization:** [Plotly Express](https://plotly.com/python/plotly-express/)
+* **Language:** Python 3.9+
+
+---
+
+## 🚀 Local Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone [https://github.com/Meenu-Lakshmi/ecommerce-marketing-dashboard.git](https://github.com/Meenu-Lakshmi/ecommerce-marketing-dashboard.git)
+cd ecommerce-marketing-dashboard
+
+```
+
+### 2. Create and Activate a Virtual Environment
+
+```bash
+# On Windows
+python -m venv venv
+venv\Scripts\activate
+
+# On macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+
+```
+
+### 4. Launch the Streamlit Dashboard
+
+```bash
+streamlit run app.py
+
+```
+
+The dashboard will open automatically in your browser at `http://localhost:8501`.
+
+---
+
+## 📐 Key Formulas & Metrics
+
+* **Return on Ad Spend (ROAS):**
+
+$$\text{ROAS} = \frac{\text{Attributed Revenue}}{\text{Marketing Spend}}$$
+
+
+* **Customer Acquisition Cost (CAC):**
+
+$$\text{CAC} = \frac{\text{Marketing Spend}}{\text{New Customers Acquired}}$$
+
+
+* **Average Order Value (AOV):**
+
+$$\text{AOV} = \frac{\text{Total Store Revenue}}{\text{Total Orders}}$$
+
+
+* **Gross Profit Margin (%):**
+
+$$\text{Gross Profit Margin} = \left( \frac{\text{Gross Profit}}{\text{Total Store Revenue}} \right) \times 100$$
+
+
+
+```
+
+```
