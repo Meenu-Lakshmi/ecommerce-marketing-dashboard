@@ -1,0 +1,10 @@
+[theme]
+base="dark"
+primaryColor="#8A2BE2" # Primary accent color (e.g., buttons, sliders)
+backgroundColor="#0E1117" # Very dark grey/black background for the app
+secondaryBackgroundColor="#000000" # Explicitly black for sidebar and multiselect widget backgrounds
+textColor="#FAFAFA" # White text
+font="sans serif"
+
+[client]
+showSidebarNavigation = false # Hides the default Streamlit sidebar menu items for a cleaner look
