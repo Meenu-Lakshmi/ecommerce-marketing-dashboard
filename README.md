@@ -8,35 +8,35 @@ An executive-level, interactive Business Intelligence (BI) dashboard built with 
 ## 📸 Dashboard Preview
 
 ### 📊 Tab 1: Executive Overview
-![Executive Overview](assets/overview.png)
-![Overview Metrics](assets/overview_2.png)
-![Overview Trends](assets/overvie_3.png)
+![Executive Overview](Assets/overview.png)
+![Overview Metrics](Assets/overview_2.png)
+![Overview Trends](Assets/overvie_3.png)
 
 ---
 
 ### 🎯 Tab 2: Channel Performance Deep Dive
-![Channel Performance](assets/Tab_2.png)
-![Channel Trends](assets/Tab_2.1.png)
-![Channel Metrics](assets/Tab_2.3.png)
+![Channel Performance](Assets/Tab_2.png)
+![Channel Trends](Assets/Tab_2.1.png)
+![Channel Metrics](Assets/Tab_2.3.png)
 
 ---
 
 ### 🔍 Tab 3: Campaign & Tactic Deep Dive
-![Campaign Deep Dive](assets/Tab3.png)
-![Tactic Analysis](assets/Tab3.1.png)
-![Scatter Analysis](assets/Tab3.3.png)
+![Campaign Deep Dive](Assets/Tab3.png)
+![Tactic Analysis](Assets/Tab3.1.png)
+![Scatter Analysis](Assets/Tab3.3.png)
 
 ---
 
 ### 📈 Tab 4: Business Impact & Financials
-![Business Impact](assets/Tab4.png)
-![Customer Acquisition](assets/Tab4.1.png)
-![Revenue Breakdown](assets/Tab4.2.png)
+![Business Impact](Assets/Tab4.png)
+![Customer Acquisition](Assets/Tab4.1.png)
+![Revenue Breakdown](Assets/Tab4.2.png)
 
 ---
 
 ### 🎛️ Sidebar Filter Panel
-![Filter Panel](assets/Filter_panel.png)
+![Filter Panel](Assets/Filter_panel.png)
 
 ---
 
@@ -89,7 +89,7 @@ ecommerce-marketing-dashboard/
 ├── ecommerce_granular_data.csv        # Low-level campaign dataset (3,600 rows)
 ├── combined_marketing_business.csv    # Channel-level daily summary table (360 rows)
 │
-├── assets/                            # Dashboard screenshot images for README
+├── Assets/                            # Dashboard screenshot images for README
 │   ├── overview.png
 │   ├── overview_2.png
 │   ├── overvie_3.png
@@ -258,8 +258,15 @@ $$\text{Total Granular Rows} = 1,200 \times 3 = \mathbf{3,600\text{ rows}}$$
 
 1. **Grouping:** Grouped `ecommerce_granular_data.csv` by **`['date', 'channel']`**.
 2. **Aggregation Functions:**
-* Summed channel ad metrics: $\sum(\text{spend})$, $\sum(\text{attributed\_revenue})$, $\sum(\text{impression})$, $\sum(\text{clicks})$.
-* Retained store-level totals from `business.csv` using `first()`.
+  $$\sum(spend)$$
+
+  $$\sum(attributed\ revenue)$$
+
+  $$\sum(impression)$$
+
+  $$\sum(clicks)$$
+
+- **Retained store-level totals** from `business.csv` using `first()`.
 
 
 3. **Output Size:** $120\text{ days} \times 3\text{ channels} = \mathbf{360\text{ rows}}$.
@@ -274,14 +281,11 @@ $$\text{Total Granular Rows} = 1,200 \times 3 = \mathbf{3,600\text{ rows}}$$
 
 3. **Macro KPI Calculation:** Calculated company-wide executive indicators:
 
-$$\text{Blended ROAS} = \frac{\text{total\_mkt\_attributed\_revenue}}{\text{total\_mkt\_spend}}$$
+Blended ROAS = Total Marketing Attributed Revenue / Total Marketing Spend
 
+CAC = Total Marketing Spend / New Customers
 
-$$\text{Customer Acquisition Cost (CAC)} = \frac{\text{total\_mkt\_spend}}{\text{new\_customers}}$$
-
-
-$$\text{Gross Margin \%} = \left( \frac{\text{gross\_profit}}{\text{total\_revenue}} \right) \times 100$$
-
+Gross Margin % = (Gross Profit / Total Revenue) × 100
 
 4. **Output Size:** 1 record per tracking day = **120 rows**.
 
